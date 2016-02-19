@@ -1,4 +1,4 @@
-package test;
+
 
 
 import java.io.IOException;
@@ -15,6 +15,12 @@ public class Test2 extends HttpServlet {
 	private static final long serialVersionUID = 1L; 
 	
 	private Test test;
+	
+	String[] pars;
+	//String f1;
+	String f2;
+    String f3;
+	String f4;
     
     public Test2() {
         
@@ -46,37 +52,41 @@ public class Test2 extends HttpServlet {
 	}
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-			response.sendRedirect("req_params.jsp");
+		response.sendRedirect("req_params.jsp");
 		
 		Map map = request.getParameterMap();
 		Object[] keys = map.keySet().toArray();
 		
-		//<html><head><title>Request Parameters</title></head><body>
 		
-		for (int k = 0; k < keys.length; k++) {
-		/*
-		 Т.О. массив pars будет содержать динамические параметры, передаваемые в
-		http://localhost:8080/tests/req_params.jsp?a=b&c=d&a=zzz&empty=&empty=&1=22
-		*/
-		String[] pars = request.getParameterValues((String)keys[k]);
 		
-		test.setFlag1(pars[0]);
+	/*	for (int k = 0; k < keys.length; k++) { */
+		
+		String[] pars = request.getParameterValues((String)keys[0]);
+		String[] pars1 = request.getParameterValues((String)keys[1]);
+		
+		
+		String f1 = pars[0];
+		String f2 = pars1[0];
+         //f3 = pars[2];
+		 //f4 = pars[3];
+		System.out.println(pars+" чуть 1 "+f1+" чуть 2 "+f2);
+		 
+	//	}
+		//System.out.println(f1+pars+f2/*+f3+f4*/);
+		
+	/*	test.setFlag1(pars[0]);
 		test.setFlag2(pars[1]);
 		test.setFlag3(pars[2]);
 		test.setFlag4(pars[3]);
 		
 		System.out.println("Печать значение флагов "+test.getFlag1()+test.getFlag2()+test.getFlag3()+test.getFlag4());
+	*/	
 		
-		//System.out.println(pars);
-		//out.print("<tr><td>" + k + "</td><td>'" + keys[k] + "'</td><td>");
-		//for (int j = 0; j < pars.length; j++) {
-		//if (j > 0) out.print(", ");
-		//System.out.print("'" + pars[j] + "'");
 		}
-		//out.println("</td></tr>");
+		
 		}
 		
 		
 		
-		}
+		
 
