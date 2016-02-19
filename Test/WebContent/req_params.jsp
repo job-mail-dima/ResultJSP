@@ -10,6 +10,9 @@ Object[] keys = map.keySet().toArray();
 Map size = <%=map.size()%>
 <table border="1">
 <tr><td>Map element</td><td>Par name</td><td>Par value[s]</td></tr>
+
+
+
 <%
 for (int k = 0; k < keys.length; k++) {
 /*
@@ -27,9 +30,11 @@ for (int j = 0; j < pars.length; j++) {
 if (j > 0) out.print(", ");
 out.print("'" + pars[j] + "'");
 
-out.println("Печать тест "+pars[j]);
+//out.println("Печать тест "+pars[j]);
 }
 out.println("</td></tr>");
+
+//response.setContentType(pars[k]);
 }
 //Test
 //out.println(keys[k]);

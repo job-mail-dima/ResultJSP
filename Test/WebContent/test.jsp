@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,8 +16,7 @@
 </head>
 <body>
 <table>
- <a href="req_params.jsp?flag1=true&flag2=false&flag3=true&flaf4=true">Reg Param</a>
- <br>
- <a href="Test2?flag1=true&flag2=false&flag3=true&flaf4=true">Reg Param Servlet</a>
+<%private Test test; %>
+<%=test.getFlag1() %>
 </body>
 </html>
