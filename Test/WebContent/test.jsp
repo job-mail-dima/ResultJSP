@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Авторизация</title>
+<title>Авторизация яя-яя-яя</title>
 </head>
 <body>
 <!DOCTYPE html>
