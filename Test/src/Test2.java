@@ -66,10 +66,14 @@ public class Test2 extends HttpServlet {
 		
 		
 		String f1 = pars[0];
+		test.setFlag1(f1);
 		String f2 = pars1[0];
+		test.setFlag2(f2);
          //f3 = pars[2];
 		 //f4 = pars[3];
-		System.out.println(pars+" чуть 1 "+f1+" чуть 2 "+f2);
+		
+		System.out.println("Печать значение флагов "+test.getFlag1()+test.getFlag2());
+		//System.out.println(pars+" чуть 1 "+f1+" чуть 2 "+f2);
 		 
 	//	}
 		//System.out.println(f1+pars+f2/*+f3+f4*/);
